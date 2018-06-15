@@ -1,0 +1,48 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Products Management" verbose="1" parallel = "methods" thread-count="3" data-provider-thread-count="6">
+    <test name="Create New Order [Chrome]">
+        <parameter name="selenium.browser" value="chrome"/>
+        <parameter name="selenium.grid" value="http://localhost:4444/wd/hub"/>
+        <classes>
+            <class name="assignment5.hometask5.tests.PlaceOrderTest"/>
+        </classes>
+    </test>
+
+    <!--Configure tests for other browser types-->
+    <test name="Create New Order [Firefox]">
+        <parameter name="selenium.browser" value="firefox"/>
+        <parameter name="selenium.grid" value="http://localhost:4444/wd/hub"/>
+        <classes>
+            <class name="assignment5.hometask5.tests.PlaceOrderTest"/>
+        </classes>
+    </test>
+    <!--<test name="Create New Order [IE]">-->
+        <!--<parameter name="selenium.browser" value="ie"/>-->
+        <!--<parameter name="selenium.grid" value="http://localhost:4444/wd/hub"/>-->
+        <!--<classes>-->
+            <!--<class name="PlaceOrderTest"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+    <test name="Create New Order [PhantomJs]">
+        <parameter name="selenium.browser" value="phantomjs"/>
+        <parameter name="selenium.grid" value="http://localhost:4444/wd/hub"/>
+        <classes>
+            <class name="assignment5.hometask5.tests.PlaceOrderTest"/>
+        </classes>
+    </test>
+    <test name="Create New Order [Opera]">
+        <parameter name="selenium.browser" value="opera"/>
+        <parameter name="selenium.grid" value="http://localhost:4444/wd/hub"/>
+        <classes>
+            <class name="assignment5.hometask5.tests.PlaceOrderTest"/>
+        </classes>
+    </test>
+    <test name="Create New Order [Android]">
+    <parameter name="selenium.browser" value="android"/>
+    <parameter name="selenium.grid" value="http://localhost:4444/wd/hub"/>
+    <classes>
+    <class name="assignment5.hometask5.tests.PlaceOrderTest"/>
+    </classes>
+    </test>
+</suite>
